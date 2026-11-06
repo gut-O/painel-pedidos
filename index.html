@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel de Pedidos</title>
+  <style>
+    :root { font-family: Inter, system-ui, sans-serif; color: #172033; background: #f4f7fb; }
+    body { max-width: 1100px; margin: 0 auto; padding: 32px 20px; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    h1 { margin: 0 0 6px; } .muted { color: #68758a; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 28px 0; }
+    .card, table { background: white; border: 1px solid #e3e9f2; border-radius: 14px; }
+    .card { padding: 18px; } .number { font-size: 28px; font-weight: 750; margin-top: 8px; }
+    table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; }
+    th, td { text-align: left; padding: 14px 16px; border-bottom: 1px solid #edf1f6; }
+    th { color: #68758a; font-size: 13px; } tr:last-child td { border-bottom: 0; }
+    .tag { border-radius: 99px; padding: 5px 9px; font-size: 12px; font-weight: 700; }
+    .novo { background: #e7f0ff; color: #2457a6; } .andamento { background: #fff4d8; color: #8d6500; }
+    .entregue { background: #e5f8ec; color: #17713a; }
+    @media (max-width: 760px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+  <header><div><h1>Painel de pedidos</h1><div class="muted">Demonstração de dashboard operacional</div></div><strong>Atualizado agora</strong></header>
+  <section class="grid" aria-label="Indicadores">
+    <div class="card"><div class="muted">Total</div><div class="number">24</div></div>
+    <div class="card"><div class="muted">Novos</div><div class="number">8</div></div>
+    <div class="card"><div class="muted">Em andamento</div><div class="number">11</div></div>
+    <div class="card"><div class="muted">Entregues</div><div class="number">5</div></div>
+  </section>
+  <table><thead><tr><th>Pedido</th><th>Descrição</th><th>Data</th><th>Status</th></tr></thead><tbody>
+    <tr><td>#1042</td><td>Landing page</td><td>06/11/2026</td><td><span class="tag novo">Novo</span></td></tr>
+    <tr><td>#1041</td><td>Integração de dados</td><td>05/11/2026</td><td><span class="tag andamento">Em andamento</span></td></tr>
+    <tr><td>#1040</td><td>Automação de rotina</td><td>04/11/2026</td><td><span class="tag entregue">Entregue</span></td></tr>
+  </tbody></table>
+</body>
+</html>
